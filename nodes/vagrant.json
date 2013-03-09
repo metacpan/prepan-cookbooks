@@ -1,7 +1,5 @@
-// {"run_list":[]}
-
 {
-    "recipes": [
-        "nginx"
+    "run_list": [
+        "role[development]"
     ]
 }

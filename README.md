@@ -38,7 +38,7 @@ $ librarian-chef install
 ## Provision Vagrant
 
 ```sh
-$ knife solo cook vagrant
+$ knife solo cook vagrant -c config/knife.rb
 ```
 
 ## Provision Hosts on Production (EC2)
