@@ -1,2 +1,4 @@
 name "base"
-run_list %w()
+run_list %w(
+  recipe[base]
+)

@@ -37,7 +37,18 @@ $ librarian-chef install
 
 ## Provision Vagrant
 
+Launch Vagrant at first:
+
+```
+$ vagrant up
+```
+
+This take a long while at the first time.
+
+Then provision it:
+
 ```sh
+$ knife solo prepare vagrant
 $ knife solo cook vagrant -c config/knife.rb
 ```
 
