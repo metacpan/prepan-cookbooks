@@ -27,6 +27,14 @@ Host vagrant
   IdentityFile ~/.vagrant.d/insecure_private_key
 ```
 
+### Chef cookbooks
+
+Download dependent Chef cookbooks with `librarian-chef`:
+
+```sh
+$ librarian-chef install
+```
+
 ## Provision a Host for Development
 
 

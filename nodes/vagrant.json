@@ -1,1 +1,7 @@
-{"run_list":[]}
+// {"run_list":[]}
+
+{
+    "recipes": [
+        "nginx"
+    ]
+}
