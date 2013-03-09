@@ -1,10 +1,5 @@
-#
-# Cookbook Name:: base
-# Recipe:: default
-#
-# Copyright 2013, YOUR_COMPANY_NAME
-#
-# All rights reserved - Do Not Redistribute
-#
-
-include_recipe "base::iptables"
+Dir.glob("#{File.dirname(__FILE__)}/*.rb") do |file|
+  next if file =~ /default\.rb$/
+  file_name = file.scan(/([^\/]+)\.rb$/)[0].first
+  include_recipe "base::#{file_name}"
+end
