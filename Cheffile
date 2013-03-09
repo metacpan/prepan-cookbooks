@@ -1,0 +1,4 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+site 'http://community.opscode.com/api/v1'
