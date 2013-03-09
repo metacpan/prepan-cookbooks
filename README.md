@@ -35,9 +35,11 @@ Download dependent Chef cookbooks with `librarian-chef`:
 $ librarian-chef install
 ```
 
-## Provision a Host for Development
+## Provision Vagrant
 
-
+```sh
+$ knife solo cook vagrant
+```
 
 ## Provision Hosts on Production (EC2)
 
