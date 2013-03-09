@@ -16,5 +16,5 @@ default_attributes(
     "nginx"  => {
       "port" => "80",
     },
-  }
+  },
 )
