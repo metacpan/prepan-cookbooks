@@ -4,3 +4,4 @@
 site "http://community.opscode.com/api/v1"
 
 cookbook "nginx"
+cookbook "git"

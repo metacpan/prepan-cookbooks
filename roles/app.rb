@@ -3,6 +3,7 @@ run_list %w(
   role[base]
   recipe[nginx]
   recipe[site-nginx]
+  recipe[perl]
 )
 
 default_attributes(
