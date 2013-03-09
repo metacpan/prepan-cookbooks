@@ -20,7 +20,10 @@ $ gem install knife-solo librarian vagrant ec2ssh
 Add the config to your `~/.ssh/config` to enable SSH login:
 
 ```
-Host 192.168.33.*
+Host vagrant
+  HostName 127.0.0.1
+  User vagrant
+  Port 2222
   IdentityFile ~/.vagrant.d/insecure_private_key
 ```
 
