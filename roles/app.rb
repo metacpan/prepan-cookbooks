@@ -4,6 +4,7 @@ run_list %w(
   recipe[nginx]
   recipe[site-nginx]
   recipe[perl]
+  recipe[mysql::client]
 )
 
 default_attributes(
