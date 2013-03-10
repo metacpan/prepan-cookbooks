@@ -1,6 +1,7 @@
 name "app"
 run_list %w(
   role[base]
+  recipe[sudo]
   recipe[nginx]
   recipe[site-nginx]
   recipe[perl]
@@ -9,6 +10,13 @@ run_list %w(
 )
 
 default_attributes(
+  "authorization" =>  {
+    "sudo" => {
+      "groups" => ["admin", "wheel"],
+      "users"  => ["vagrant", "deployer"],
+    }
+  },
+
   "app" => {
     "name"   => "prepan",
     "domain" => "prepan.org",

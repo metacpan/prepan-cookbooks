@@ -23,6 +23,7 @@ SITE
     openssl (1.0.0)
     runit (1.1.0)
       build-essential (>= 0.0.0)
+    sudo (2.0.4)
     windows (1.8.4)
       chef_handler (>= 0.0.0)
     yum (2.1.0)
@@ -31,4 +32,5 @@ DEPENDENCIES
   git (>= 0)
   mysql (>= 0)
   nginx (>= 0)
+  sudo (>= 0)
 
