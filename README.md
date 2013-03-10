@@ -73,3 +73,5 @@ Then provision it:
 ```sh
 $ knife solo cook ec2-user@app-1.us-west-1 -i ~/.ssh/prepan.pem
 ```
+
+From the 2nd time, you have to use `deployer` user 

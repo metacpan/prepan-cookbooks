@@ -1,6 +1,6 @@
 name "redis"
 run_list %w(
-  recipe[build-essential]
+  role[base]
   recipe[redis::source]
 )
 

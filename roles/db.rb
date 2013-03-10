@@ -1,5 +1,6 @@
 name "db"
 run_list %w(
+  role[base]
   recipe[mysql::server]
 )
 

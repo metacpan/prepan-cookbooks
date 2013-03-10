@@ -17,5 +17,5 @@ execute "svscan" do
 initctl reload-configuration
 initctl start svscan
 COMMAND
-  not_if { system("initctl status svscan") }
+  only_if { `initctl status svscan`.match(/stop/) }
 end

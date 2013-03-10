@@ -1,3 +1,3 @@
 package "perl" do
-  notifies :run, "package[perl-CPAN]"
+  notifies :run, "execute[install cpanm]"
 end
