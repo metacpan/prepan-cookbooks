@@ -27,6 +27,12 @@ Host local.prepan.org
   IdentityFile ~/.vagrant.d/insecure_private_key
 ```
 
+Then add the line below into your `/etc/hosts`:
+
+```
+127.0.0.1 local.prepan.org
+```
+
 ### Chef cookbooks
 
 Download dependent Chef cookbooks with `librarian-chef`:
