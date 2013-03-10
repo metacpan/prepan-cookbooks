@@ -60,3 +60,16 @@ $ knife solo cook local.prepan.org -c config/knife.rb
 
 ## Provision Hosts on Production (EC2)
 
+Prepare remote host:
+
+```sh
+$ knife solo prepare ec2-user@app-1.us-west-1 -i ~/.ssh/prepan.pem
+```
+
+Edit `node/${hostname}.json` if it's not thre.
+
+Then provision it:
+
+```sh
+$ knife solo cook ec2-user@app-1.us-west-1 -i ~/.ssh/prepan.pem
+```

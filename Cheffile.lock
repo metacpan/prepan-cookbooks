@@ -20,7 +20,7 @@ SITE
       ohai (>= 1.1.4)
       yum (>= 0.0.0)
     ohai (1.1.8)
-    openssl (1.0.0)
+    openssl (1.0.2)
     runit (1.1.0)
       build-essential (>= 0.0.0)
     sudo (2.0.4)
@@ -28,9 +28,17 @@ SITE
       chef_handler (>= 0.0.0)
     yum (2.1.0)
 
+GIT
+  remote: git://github.com/kentaro/chef-redis.git
+  ref: master
+  sha: 54a20fe89da33812034e64ab69a371e7b2e918d4
+  specs:
+    redis (0.0.4)
+
 DEPENDENCIES
   git (>= 0)
   mysql (>= 0)
   nginx (>= 0)
+  redis (>= 0)
   sudo (>= 0)
 
