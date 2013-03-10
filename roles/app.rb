@@ -18,14 +18,15 @@ default_attributes(
   },
 
   "app" => {
-    "name"   => "prepan",
-    "domain" => "prepan.org",
-    "server" => {
-      "host" => "127.0.0.1",
-      "port" => "8000",
+    "services" => %w(web worker),
+    "name"     => "prepan",
+    "domain"   => "prepan.org",
+    "server"   => {
+      "host"   => "127.0.0.1",
+      "port"   => "8000",
     },
-    "nginx"  => {
-      "port" => "80",
+    "nginx"    => {
+      "port"   => "80",
     },
   },
 )

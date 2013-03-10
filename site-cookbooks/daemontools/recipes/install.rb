@@ -19,8 +19,3 @@ initctl start svscan
 COMMAND
   not_if { system("initctl status svscan") }
 end
-
-directory "/service" do
-  action :create
-  mode   0755
-end
