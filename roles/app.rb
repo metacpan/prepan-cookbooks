@@ -13,7 +13,7 @@ default_attributes(
   "authorization" =>  {
     "sudo" => {
       "groups" => ["admin", "wheel"],
-      "users"  => ["vagrant", "deployer"],
+      "users"  => ["deployer"],
     }
   },
 

@@ -1,5 +1,15 @@
 {
     "run_list": [
         "role[development]"
-    ]
+    ],
+
+    "app": {
+        "domain": "local.prepan.org"
+    },
+
+    "authorization":  {
+        "sudo": {
+            "users": ["vagrant", "deployer"]
+        }
+    }
 }
