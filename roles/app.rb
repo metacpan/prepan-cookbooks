@@ -5,6 +5,7 @@ run_list %w(
   recipe[site-nginx]
   recipe[perl]
   recipe[mysql::client]
+  recipe[daemontools]
 )
 
 default_attributes(
