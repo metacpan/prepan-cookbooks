@@ -20,7 +20,7 @@ $ gem install knife-solo librarian vagrant ec2ssh
 Add the config to your `~/.ssh/config` to enable SSH login:
 
 ```
-Host vagrant
+Host local.prepan.org
   HostName 127.0.0.1
   User vagrant
   Port 2222
@@ -48,8 +48,8 @@ This take a long while at the first time.
 Then provision it:
 
 ```sh
-$ knife solo prepare vagrant
-$ knife solo cook vagrant -c config/knife.rb
+$ knife solo prepare local.prepan.org
+$ knife solo cook local.prepan.org -c config/knife.rb
 ```
 
 ## Provision Hosts on Production (EC2)
