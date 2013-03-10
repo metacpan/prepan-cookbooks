@@ -1,10 +1,12 @@
 package "perl-CPAN" do
   notifies :run, "execute[install cpanm]"
+  not_if { system('which cpan') }
 end
 
 execute "install cpanm" do
   command "cpan App::cpanminus"
   notifies :run, "execute[install modules]"
+  not_if { system('which cpanm') }
 end
 
 execute "install modules" do
@@ -17,4 +19,6 @@ execute "install modules" do
   ].each do |name|
     command "cpanm #{name}"
   end
+
+  not_if { system('which carton') }
 end

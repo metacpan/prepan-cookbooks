@@ -6,6 +6,13 @@ node.app.services.each do |name|
     mode   0755
   end
 
+  directory "/service/#{name}/log" do
+    action :create
+    owner  'deployer'
+    group  'deployer'
+    mode   0755
+  end
+
   directory "/service/#{name}/log/main" do
     action :create
     owner  'deployer'
