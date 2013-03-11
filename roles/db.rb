@@ -10,5 +10,6 @@ default_attributes(
     "server_root_password"   => "",
     "server_repl_password"   => "",
     "server_debian_password" => "",
+    "use_upstart"            => true,
   },
 )

@@ -9,5 +9,5 @@ Vagrant::Config.run do |config|
   config.vm.network :hostonly, "192.168.33.10"
   config.vm.network :bridged
 
-  config.vm.forward_port 80, 8000
+  config.vm.forward_port 8000, 8000
 end

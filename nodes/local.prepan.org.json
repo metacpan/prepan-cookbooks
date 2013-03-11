@@ -4,7 +4,10 @@
     ],
 
     "app": {
-        "domain": "local.prepan.org"
+        "domain": "local.prepan.org",
+        "nginx": {
+            "port": "8000"
+        }
     },
 
     "authorization":  {

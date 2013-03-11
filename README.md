@@ -4,7 +4,7 @@
 
 ### Ruby Libraries
 
-You have to the gem libraries listed below:
+You have to install the gem libraries listed below:
 
   * knife-solo
   * librarian
@@ -13,6 +13,27 @@ You have to the gem libraries listed below:
 
 ```sh
 $ gem install knife-solo librarian vagrant ec2ssh
+```
+
+### ec2ssh
+
+Make a file named '~/.ec2ssh' as below:
+
+```
+---
+aws_keys:
+  prepan:
+    access_key_id:     your access key
+    secret_access_key: your secret access key
+regions:
+  - us-west-1
+```
+
+Then setup your `$HOME/.ssh/config`:
+
+```
+$ ec2ssh init --path ~/.ssh/config
+$ ec2ssh update --aws_key prepan --path ~/.ssh/config
 ```
 
 ### Vagrant
@@ -63,7 +84,7 @@ $ knife solo cook local.prepan.org -c config/knife.rb
 Prepare remote host:
 
 ```sh
-$ knife solo prepare ec2-user@app-1.us-west-1 -i ~/.ssh/prepan.pem
+$ knife solo prepare ec2-user@app-1.us-west-1 -i ~/.ssh/prepan.pem -c config/knife.rb
 ```
 
 Edit `node/${hostname}.json` if it's not thre.
@@ -71,7 +92,11 @@ Edit `node/${hostname}.json` if it's not thre.
 Then provision it:
 
 ```sh
-$ knife solo cook ec2-user@app-1.us-west-1 -i ~/.ssh/prepan.pem
+$ knife solo cook ec2-user@app-1.us-west-1 -i ~/.ssh/prepan.pem  -c config/knife.rb
 ```
 
-From the 2nd time, you have to use `deployer` user 
+From the 2nd time, you have to use `deployer` user for login user:
+
+```sh
+$ knife solo cook deployer@app-1.us-west-1 -i ~/.ssh/prepan.pem  -c config/knife.rb
+```

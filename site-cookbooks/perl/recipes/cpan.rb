@@ -1,3 +1,7 @@
+package "perl-CPAN" do
+  action :install
+end
+
 execute "install cpanm" do
   command "curl -L http://cpanmin.us | perl - --self-upgrade"
   not_if { system('which cpanm') }
