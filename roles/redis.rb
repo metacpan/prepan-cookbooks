@@ -6,8 +6,9 @@ run_list %w(
 
 default_attributes(
   "redis" => {
+    "bind"   => "0.0.0.0",
     "source" => {
-      "version" => "2.6.10"
+      "version" => "2.6.10",
     },
   },
 )
