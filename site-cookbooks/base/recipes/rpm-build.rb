@@ -1,3 +1,3 @@
 package "rpm-build" do
-  action :install
+  action :upgrade
 end

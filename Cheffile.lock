@@ -29,7 +29,14 @@ SITE
     yum (2.1.0)
 
 GIT
-  remote: git://github.com/kentaro/chef-redis.git
+  remote: https://github.com/kentaro/chef-plenv
+  ref: master
+  sha: aa157e79beff3477290a27d0e7ee004045c6b82f
+  specs:
+    plenv (0.1.0)
+
+GIT
+  remote: https://github.com/kentaro/chef-redis
   ref: master
   sha: 54a20fe89da33812034e64ab69a371e7b2e918d4
   specs:
@@ -39,6 +46,7 @@ DEPENDENCIES
   git (>= 0)
   mysql (>= 0)
   nginx (>= 0)
+  plenv (>= 0)
   redis (>= 0)
   sudo (>= 0)
 

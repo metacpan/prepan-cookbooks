@@ -4,6 +4,7 @@ run_list %w(
   recipe[sudo]
   recipe[nginx]
   recipe[site-nginx]
+  recipe[plenv]
   recipe[perl]
   recipe[mysql::client]
   recipe[daemontools]

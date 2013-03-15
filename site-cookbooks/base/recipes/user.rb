@@ -1,17 +1,23 @@
 user node.base.user.name do
   action   :create
   password "$1$3uVcoLeR$lnfAW3PtHJBjk.Pknldad."
+  shell    "/bin/bash"
   supports manage_home: true, non_unique: false
-  notifies :run, "directory[#{node.base.www_dir}]"
 end
 
-directory "/home/deployer/.ssh" do
+directory "/home/#{node.base.user.name}" do
   action :create
   owner  'deployer'
   group  'deployer'
 end
 
-cookbook_file "/home/deployer/.ssh/authorized_keys" do
+directory "/home/#{node.base.user.name}/.ssh" do
+  action :create
+  owner  'deployer'
+  group  'deployer'
+end
+
+cookbook_file "/home/#{node.base.user.name}/.ssh/authorized_keys" do
   action :create
   owner  'deployer'
   group  'deployer'

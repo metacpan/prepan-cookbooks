@@ -1,3 +1,3 @@
-package "perl" do
-  notifies :run, "execute[install cpanm]"
+plenv_perl "5.16.3" do
+  user "deployer"
 end
