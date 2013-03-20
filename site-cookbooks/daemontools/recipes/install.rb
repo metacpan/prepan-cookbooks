@@ -9,7 +9,7 @@ end
 
 cookbook_file "/etc/init/svscan.conf" do
   action   :create
-  notifies :run, "execute[svscan]"
+  notifies :reload, "execute[svscan]"
 end
 
 execute "svscan" do

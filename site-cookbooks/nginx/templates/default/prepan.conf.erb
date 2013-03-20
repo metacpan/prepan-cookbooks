@@ -13,8 +13,8 @@ server {
   listen <%= node.app.nginx.port %>;
   server_name <%= node.app.domain %>;
 
-  access_log <%= node.nginx.log_dir %>/<%= node.app.name %>.access.log;
-  error_log  <%= node.nginx.log_dir %>/<%= node.app.name %>.error.log;
+  access_log /var/log/nginx/<%= node.app.name %>.access.log;
+  error_log  /var/log/nginx/<%= node.app.name %>.error.log;
 
   location / {
     proxy_pass http://<%= node.app.name %>/;

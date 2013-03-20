@@ -3,7 +3,8 @@
 
 site "http://community.opscode.com/api/v1"
 
-cookbook "nginx"
+cookbook "yum"
+cookbook "build-essential"
 cookbook "git"
 cookbook "sudo"
 cookbook "redis", git: "git://github.com/kentaro/chef-redis.git"

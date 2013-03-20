@@ -3,7 +3,6 @@ run_list %w(
   role[base]
   recipe[sudo]
   recipe[nginx]
-  recipe[site-nginx]
   recipe[perl]
   recipe[mysql::client]
   recipe[daemontools]
