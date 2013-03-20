@@ -4,7 +4,7 @@ package "mysql-server" do
   action :install
 end
 
-execute 'mysql-install-db' do
+execute "mysql-install-db" do
   command "mysql_install_db"
   action :run
   not_if { File.exists?('/var/lib/mysql/mysql/user.frm') }
