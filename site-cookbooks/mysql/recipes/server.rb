@@ -11,6 +11,6 @@ execute "mysql-install-db" do
 end
 
 service "mysqld" do
-  supports :status => true, :restart => true, :reload => true
-  action [ :enable, :start ]
+  supports status: true, restart: true, reload: true
+  action   [ :enable, :start ]
 end
