@@ -11,8 +11,12 @@ You have to install the gem libraries listed below:
   * vagrant
   * ec2ssh
 
+the gem libraries except ec2ssh are managed by bundler.  So You can install these libraries by following commands.
+
 ```sh
-$ gem install knife-solo librarian vagrant ec2ssh
+$ gem install ec2ssh
+$ gem install bundler
+$ bundle install
 ```
 
 ### ec2ssh
@@ -59,7 +63,7 @@ Then add the line below into your `/etc/hosts`:
 Download dependent Chef cookbooks with `librarian-chef`:
 
 ```sh
-$ librarian-chef install
+$ bundle exec librarian-chef install
 ```
 
 ## Provision Vagrant
@@ -67,7 +71,7 @@ $ librarian-chef install
 Launch Vagrant at first:
 
 ```
-$ vagrant up
+$ bundle exec vagrant up
 ```
 
 This take a long while at the first time.
@@ -75,8 +79,8 @@ This take a long while at the first time.
 Then provision it:
 
 ```sh
-$ knife solo prepare local.prepan.org
-$ knife solo cook local.prepan.org -c config/knife.rb
+$ bundle exec knife solo prepare local.prepan.org
+$ bundle exec knife solo cook local.prepan.org -c config/knife.rb
 ```
 
 ## Provision Hosts on Production (EC2)
@@ -84,7 +88,7 @@ $ knife solo cook local.prepan.org -c config/knife.rb
 Prepare remote host:
 
 ```sh
-$ knife solo prepare ec2-user@app-1.us-west-1 -i ~/.ssh/prepan.pem -c config/knife.rb
+$ bundle exec knife solo prepare ec2-user@app-1.us-west-1 -i ~/.ssh/prepan.pem -c config/knife.rb
 ```
 
 Edit `node/${hostname}.json` if it's not thre.
@@ -92,11 +96,11 @@ Edit `node/${hostname}.json` if it's not thre.
 Then provision it:
 
 ```sh
-$ knife solo cook ec2-user@app-1.us-west-1 -i ~/.ssh/prepan.pem  -c config/knife.rb
+$ bundle exec knife solo cook ec2-user@app-1.us-west-1 -i ~/.ssh/prepan.pem  -c config/knife.rb
 ```
 
 From the 2nd time, you have to use `deployer` user for login user:
 
 ```sh
-$ knife solo cook deployer@app-1.us-west-1 -i ~/.ssh/prepan.pem  -c config/knife.rb
+$ bundle exec knife solo cook deployer@app-1.us-west-1 -i ~/.ssh/prepan.pem  -c config/knife.rb
 ```
