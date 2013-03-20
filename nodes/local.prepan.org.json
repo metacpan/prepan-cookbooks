@@ -5,6 +5,10 @@
 
     "app": {
         "domain": "local.prepan.org",
+        "server": {
+          "host": "127.0.0.1",
+          "port": "8080"
+        },
         "nginx": {
             "port": "8000"
         }
