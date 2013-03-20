@@ -5,6 +5,5 @@ site "http://community.opscode.com/api/v1"
 
 cookbook "nginx"
 cookbook "git"
-cookbook "mysql"
 cookbook "sudo"
 cookbook "redis", git: "git://github.com/kentaro/chef-redis.git"
