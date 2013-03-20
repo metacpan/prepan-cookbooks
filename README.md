@@ -16,7 +16,7 @@ the gem libraries except ec2ssh are managed by bundler.  So You can install thes
 ```sh
 $ gem install ec2ssh
 $ gem install bundler
-$ bundle install
+$ bundle install --path vendor/bundle
 ```
 
 ### ec2ssh
