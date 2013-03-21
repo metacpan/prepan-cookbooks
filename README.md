@@ -8,7 +8,6 @@ You have to install the gem libraries listed below:
 
   * knife-solo
   * librarian
-  * vagrant
   * ec2ssh
 
 the gem libraries except ec2ssh are managed by bundler.  So You can install these libraries by following commands.
@@ -42,6 +41,8 @@ $ ec2ssh update --aws_key prepan --path ~/.ssh/config
 
 ### Vagrant
 
+You need to install Vagrant by the installer.  You can get it from http://docs.vagrantup.com/v2/installation/index.html.  See also http://docs.vagrantup.com/v2/installation/index.html for details.
+
 Add the config to your `~/.ssh/config` to enable SSH login:
 
 ```
@@ -71,7 +72,7 @@ $ bundle exec librarian-chef install
 Launch Vagrant at first:
 
 ```
-$ bundle exec vagrant up
+$ vagrant up
 ```
 
 This take a long while at the first time.
