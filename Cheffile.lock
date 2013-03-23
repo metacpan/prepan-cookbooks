@@ -18,6 +18,15 @@ SITE
     yum (2.1.0)
 
 GIT
+  remote: git://github.com/kentaro/chef-plenv.git
+  ref: master
+  sha: a3aed448a8adedafc7cb9998f2f56d4556b4e6eb
+  specs:
+    plenv (0.1.0)
+      build-essential (>= 0.0.0)
+      git (>= 0.0.0)
+
+GIT
   remote: git://github.com/kentaro/chef-redis.git
   ref: master
   sha: 54a20fe89da33812034e64ab69a371e7b2e918d4
@@ -27,6 +36,7 @@ GIT
 DEPENDENCIES
   build-essential (>= 0)
   git (>= 0)
+  plenv (>= 0)
   redis (>= 0)
   sudo (>= 0)
   yum (>= 0)
