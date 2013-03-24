@@ -3,12 +3,13 @@ run_list %w(
   role[base]
   recipe[sudo]
   recipe[nginx]
+  recipe[plenv]
   recipe[perl]
   recipe[mysql::client]
   recipe[daemontools]
 )
 
-default_attributes(
+override_attributes(
   "authorization" =>  {
     "sudo" => {
       "groups" => ["admin", "wheel"],
@@ -27,5 +28,15 @@ default_attributes(
     "nginx"    => {
       "port"   => "80",
     },
+    "perl"     => {
+      "version" => "5.16.3",
+      "modules" => %w[
+        Module::Install
+        Module::Install::CPANfile
+        Module::Install::ReadmeFromPod
+        Module::Install::Repository
+        git://github.com/miyagawa/carton.git
+      ]
+    }
   },
 )
