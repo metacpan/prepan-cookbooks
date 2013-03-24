@@ -9,7 +9,7 @@ run_list %w(
   recipe[daemontools]
 )
 
-default_attributes(
+override_attributes(
   "authorization" =>  {
     "sudo" => {
       "groups" => ["admin", "wheel"],
@@ -29,8 +29,8 @@ default_attributes(
       "port"   => "80",
     },
     "perl"     => {
-      version => "5.16.3",
-      modules => %w[
+      "version" => "5.16.3",
+      "modules" => %w[
         Module::Install
         Module::Install::CPANfile
         Module::Install::ReadmeFromPod

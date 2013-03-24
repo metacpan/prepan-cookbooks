@@ -15,12 +15,12 @@ SITE
     sudo (2.0.4)
     windows (1.8.4)
       chef_handler (>= 0.0.0)
-    yum (2.1.0)
+    yum (2.2.0)
 
 GIT
   remote: git://github.com/kentaro/chef-plenv.git
   ref: master
-  sha: a3aed448a8adedafc7cb9998f2f56d4556b4e6eb
+  sha: f5fe6a5a7c43be2bf9a448213de381b4c8afddcd
   specs:
     plenv (0.1.0)
       build-essential (>= 0.0.0)
