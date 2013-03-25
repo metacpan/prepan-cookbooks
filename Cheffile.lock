@@ -20,7 +20,7 @@ SITE
 GIT
   remote: git://github.com/kentaro/chef-plenv.git
   ref: master
-  sha: f5fe6a5a7c43be2bf9a448213de381b4c8afddcd
+  sha: 2a87e9091b5667f96a52be9bd70c9d05545ae0d2
   specs:
     plenv (0.1.0)
       build-essential (>= 0.0.0)
