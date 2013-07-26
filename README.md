@@ -1,4 +1,4 @@
-# Chef Cookooks for PrePAN
+# Chef Cookbooks for PrePAN
 
 ## Setup
 
