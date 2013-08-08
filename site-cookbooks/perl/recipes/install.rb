@@ -1,18 +1,13 @@
-plenv_install node.app.perl.version do
-  user node.base.user.name
-  action :install
-end
+include_recipe "xbuild"
 
-plenv_global node.app.perl.version do
-  user node.base.user.name
-  action :run
+xbuild_perl "install perl #{node['app']['perl']['version']}" do
+  version node['app']['perl']['version']
+  prefix  node['app']['perl']['prefix']
 end
 
 node.app.perl.modules.each do |mod|
-  plenv_cpanm mod do
-    user    user node.base.user.name
-    version node.app.perl.version
-    options "--force"
-    action  :install
+  xbuild_cpanm mod do
+    options '--force'
+    perl_root node['app']['perl']['prefix']
   end
 end

@@ -3,7 +3,7 @@ run_list %w(
   role[base]
   recipe[sudo]
   recipe[nginx]
-  recipe[plenv]
+  recipe[xbuild]
   recipe[perl]
   recipe[mysql::client]
   recipe[daemontools]
@@ -30,6 +30,7 @@ override_attributes(
     },
     "perl"     => {
       "version" => "5.16.3",
+      'prefix'  => '/usr/local/bin/perl-5.16.3',
       "modules" => %w[
         Module::Install
         Module::Install::CPANfile

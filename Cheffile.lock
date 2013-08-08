@@ -18,26 +18,27 @@ SITE
     yum (2.2.0)
 
 GIT
-  remote: git://github.com/kentaro/chef-plenv.git
-  ref: master
-  sha: 2a87e9091b5667f96a52be9bd70c9d05545ae0d2
-  specs:
-    plenv (0.1.0)
-      build-essential (>= 0.0.0)
-      git (>= 0.0.0)
-
-GIT
   remote: git://github.com/kentaro/chef-redis.git
   ref: master
   sha: 54a20fe89da33812034e64ab69a371e7b2e918d4
   specs:
     redis (0.0.4)
 
+GIT
+  remote: git://github.com/studio3104/chef-xbuild.git
+  ref: master
+  sha: 9c2bc1d573798ba0114c412899e73ac6e8db64b4
+  specs:
+    xbuild (0.1.0)
+      build-essential (>= 0.0.0)
+      git (>= 0.0.0)
+      yum (>= 0.0.0)
+
 DEPENDENCIES
   build-essential (>= 0)
   git (>= 0)
-  plenv (>= 0)
   redis (>= 0)
   sudo (>= 0)
+  xbuild (>= 0)
   yum (>= 0)
 
