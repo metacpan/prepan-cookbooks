@@ -3,3 +3,6 @@
 /tmp
 /.bundle/
 /vendor/
+/cookbooks/
+/tmp/librarian/
+/.chef/
