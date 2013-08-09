@@ -81,7 +81,7 @@ Then provision it:
 
 ```sh
 $ bundle exec knife solo prepare local.prepan.org
-$ bundle exec knife solo cook local.prepan.org -c config/knife.rb
+$ bundle exec knife solo cook local.prepan.org
 ```
 
 ## Provision Hosts on Production (EC2)
@@ -89,7 +89,7 @@ $ bundle exec knife solo cook local.prepan.org -c config/knife.rb
 Prepare remote host:
 
 ```sh
-$ bundle exec knife solo prepare ec2-user@app-1.us-west-1 -i ~/.ssh/prepan.pem -c config/knife.rb
+$ bundle exec knife solo prepare ec2-user@app-1.us-west-1 -i ~/.ssh/prepan.pem
 ```
 
 Edit `node/${hostname}.json` if it's not thre.
@@ -97,11 +97,11 @@ Edit `node/${hostname}.json` if it's not thre.
 Then provision it:
 
 ```sh
-$ bundle exec knife solo cook ec2-user@app-1.us-west-1 -i ~/.ssh/prepan.pem  -c config/knife.rb
+$ bundle exec knife solo cook ec2-user@app-1.us-west-1 -i ~/.ssh/prepan.pem
 ```
 
 From the 2nd time, you have to use `deployer` user for login user:
 
 ```sh
-$ bundle exec knife solo cook deployer@app-1.us-west-1 -i ~/.ssh/prepan.pem  -c config/knife.rb
+$ bundle exec knife solo cook deployer@app-1.us-west-1 -i ~/.ssh/prepan.pem
 ```
