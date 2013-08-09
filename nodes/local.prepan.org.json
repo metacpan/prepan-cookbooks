@@ -16,7 +16,8 @@
 
     "authorization":  {
         "sudo": {
-            "users": ["vagrant", "deployer"]
+            "users": ["vagrant", "deployer"],
+            "passwordless": "true"
         }
     }
 }
