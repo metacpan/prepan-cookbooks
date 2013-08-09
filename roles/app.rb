@@ -30,7 +30,7 @@ override_attributes(
     },
     "perl"     => {
       "version" => "5.16.3",
-      'prefix'  => '/usr/local/bin/perl-5.16.3',
+      'prefix'  => '/usr/local/perl-prepan',
       "modules" => %w[
         Module::Install
         Module::Install::CPANfile
