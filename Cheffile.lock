@@ -1,21 +1,22 @@
 SITE
   remote: http://community.opscode.com/api/v1
   specs:
-    build-essential (1.3.4)
+    build-essential (1.4.2)
     chef_handler (1.1.4)
-    dmg (1.1.0)
-    git (2.3.0)
+    dmg (2.0.0)
+    git (2.6.0)
       build-essential (>= 0.0.0)
       dmg (>= 0.0.0)
-      runit (~> 1.0)
+      runit (>= 1.0.0)
       windows (>= 0.0.0)
       yum (>= 0.0.0)
-    runit (1.1.0)
+    runit (1.2.0)
       build-essential (>= 0.0.0)
+      yum (>= 0.0.0)
     sudo (2.0.4)
-    windows (1.8.4)
+    windows (1.10.0)
       chef_handler (>= 0.0.0)
-    yum (2.2.0)
+    yum (2.3.2)
 
 GIT
   remote: git://github.com/kentaro/chef-redis.git
@@ -27,7 +28,7 @@ GIT
 GIT
   remote: git://github.com/studio3104/chef-xbuild.git
   ref: master
-  sha: 9c2bc1d573798ba0114c412899e73ac6e8db64b4
+  sha: 4cdc1c8401bf4c2c8e0df49c0cfc6654d658da52
   specs:
     xbuild (0.1.0)
       build-essential (>= 0.0.0)
