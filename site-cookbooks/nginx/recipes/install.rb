@@ -7,7 +7,7 @@ end
 
 yum_repository "nginx" do
   repo_name "nginx"
-  url       "http://nginx.org/packages/centos/#{node['platform_version'].to_i}/$basearch/"
+  url       "http://nginx.org/packages/centos/6/$basearch/"
 end
 
 package "nginx" do
