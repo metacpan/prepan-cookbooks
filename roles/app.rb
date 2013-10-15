@@ -7,6 +7,7 @@ run_list %w(
   recipe[perl]
   recipe[mysql::client]
   recipe[daemontools]
+  recipe[logrotate]
 )
 
 override_attributes(
