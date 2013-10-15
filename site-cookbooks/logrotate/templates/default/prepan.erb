@@ -1,4 +1,13 @@
 /var/log/<%= node.app.name %>/*.log {
     daily
     rotate 14
+    sharedscripts
+    missingok
+    compress
+    delaycompress
+    postrotate
+    <%- node.app.services.each do |name| %>
+      /usr/bin/svc -t /service/<%= name %>
+    <%- end %>
+    endscript
 }
