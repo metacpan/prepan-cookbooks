@@ -1,6 +1,7 @@
 {
     "run_list": [
-        "role[app]"
+        "role[app]",
+        "role[redis]"
     ],
 
     "app": {
