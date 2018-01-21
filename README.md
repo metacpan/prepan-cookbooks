@@ -20,37 +20,36 @@ $ bundle install --path vendor/bundle
 
 ### ec2ssh
 
-Make a file named '~/.ec2ssh' as below:
+Set `profiles` and `regions` in a file named '~/.ec2ssh` as below.
 
 ```
----
-aws_keys:
-  prepan:
-    access_key_id:     your access key
-    secret_access_key: your secret access key
-regions:
-  - us-west-1
+profiles 'default', 'prepan'
+regions *%w(us-west-1)
+```
+
+And set credentials for prepan in `~/.aws/credentials`.
+
+```
+[prepan]
+aws_access_key_id = your access key
+aws_secret_access_key = your secret access key
 ```
 
 Then setup your `$HOME/.ssh/config`:
 
 ```
 $ ec2ssh init --path ~/.ssh/config
-$ ec2ssh update --aws_key prepan --path ~/.ssh/config
+$ ec2ssh update
 ```
 
 ### Vagrant
 
-You need to install Vagrant by the installer.  You can get it from http://docs.vagrantup.com/v2/installation/index.html.  See also http://docs.vagrantup.com/v2/installation/index.html for details.
+You need to install Vagrant by the installer.  You can get it from http://docs.vagrantup.com/v2/installation/index.html .  See also http://docs.vagrantup.com/v2/installation/index.html for details.
 
-Add the config to your `~/.ssh/config` to enable SSH login:
+Add the config gotten by `vagrant ssh-config` to your `~/.ssh/config` to enable SSH login:
 
 ```
-Host local.prepan.org
-  HostName 127.0.0.1
-  User vagrant
-  Port 2222
-  IdentityFile ~/.vagrant.d/insecure_private_key
+vagrant ssh-config --host local.prepan.org >> ~/.ssh/config
 ```
 
 Then add the line below into your `/etc/hosts`:
@@ -60,6 +59,12 @@ Then add the line below into your `/etc/hosts`:
 ```
 
 ### Chef cookbooks
+
+Init knife solo.
+
+```sh
+$ bundle exec knife solo init .
+```
 
 Download dependent Chef cookbooks with `librarian-chef`:
 
