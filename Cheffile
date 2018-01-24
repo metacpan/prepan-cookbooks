@@ -4,8 +4,9 @@
 site "http://community.opscode.com/api/v1"
 
 cookbook "yum"
+cookbook "yum-epel"
 cookbook "build-essential"
 cookbook "git"
 cookbook "sudo"
 cookbook "redis", git: "git://github.com/kentaro/chef-redis.git"
-cookbook "xbuild", git: "git://github.com/studio3104/chef-xbuild.git"
+cookbook "xbuild"
