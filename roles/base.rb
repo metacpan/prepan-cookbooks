@@ -12,3 +12,9 @@ default_attributes(
     "www_dir" => "/var/www",
   },
 )
+
+override_attributes(
+  "xbuild" => {
+    "include_recipes" => %w{ git build-essential },
+  },
+)
