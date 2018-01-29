@@ -1,13 +1,10 @@
 include_recipe "yum"
 
-yum_key "nginx" do
-  url 'http://nginx.org/keys/nginx_signing.key'
-  action :add
-end
-
 yum_repository "nginx" do
-  repo_name "nginx"
-  url       "http://nginx.org/packages/centos/6/$basearch/"
+  description "nginx"
+  baseurl     "http://nginx.org/packages/centos/6/$basearch/"
+  gpgkey      "http://nginx.org/keys/nginx_signing.key"
+  action      :create
 end
 
 package "nginx" do

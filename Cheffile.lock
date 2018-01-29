@@ -1,22 +1,29 @@
 SITE
   remote: http://community.opscode.com/api/v1
   specs:
-    build-essential (1.4.2)
-    chef_handler (1.1.4)
-    dmg (2.0.0)
-    git (2.6.0)
+    build-essential (8.0.4)
+      mingw (>= 1.1)
+      seven_zip (>= 0.0.0)
+    compat_resource (12.19.0)
+    git (8.0.0)
       build-essential (>= 0.0.0)
-      dmg (>= 0.0.0)
-      runit (>= 1.0.0)
-      windows (>= 0.0.0)
-      yum (>= 0.0.0)
-    runit (1.2.0)
+      homebrew (>= 0.0.0)
+    homebrew (4.3.0)
+    mingw (2.0.1)
+      seven_zip (>= 0.0.0)
+    ohai (5.2.0)
+    seven_zip (2.0.2)
+      windows (>= 1.2.2)
+    sudo (4.0.0)
+    windows (3.4.4)
+      ohai (>= 4.0.0)
+    xbuild (0.1.0)
       build-essential (>= 0.0.0)
+      git (>= 0.0.0)
       yum (>= 0.0.0)
-    sudo (2.0.4)
-    windows (1.10.0)
-      chef_handler (>= 0.0.0)
-    yum (2.3.2)
+    yum (5.1.0)
+    yum-epel (2.1.2)
+      compat_resource (>= 12.16.3)
 
 GIT
   remote: git://github.com/kentaro/chef-redis.git
@@ -25,16 +32,6 @@ GIT
   specs:
     redis (0.0.4)
 
-GIT
-  remote: git://github.com/studio3104/chef-xbuild.git
-  ref: master
-  sha: 4cdc1c8401bf4c2c8e0df49c0cfc6654d658da52
-  specs:
-    xbuild (0.1.0)
-      build-essential (>= 0.0.0)
-      git (>= 0.0.0)
-      yum (>= 0.0.0)
-
 DEPENDENCIES
   build-essential (>= 0)
   git (>= 0)
@@ -42,4 +39,5 @@ DEPENDENCIES
   sudo (>= 0)
   xbuild (>= 0)
   yum (>= 0)
+  yum-epel (>= 0)
 
