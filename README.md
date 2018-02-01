@@ -66,10 +66,10 @@ Init knife solo.
 $ bundle exec knife solo init .
 ```
 
-Download dependent Chef cookbooks with `librarian-chef`:
+Download dependent Chef cookbooks with `berkshelf`:
 
 ```sh
-$ bundle exec librarian-chef install
+$ bundle exec berks install
 ```
 
 ## Provision Vagrant
