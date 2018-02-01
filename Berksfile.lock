@@ -1,0 +1,36 @@
+DEPENDENCIES
+  build-essential
+  git
+  redis
+    git: git://github.com/kentaro/chef-redis.git
+    revision: 54a20fe89da33812034e64ab69a371e7b2e918d4
+  sudo
+  xbuild
+  yum
+  yum-epel
+
+GRAPH
+  build-essential (8.0.4)
+    mingw (>= 1.1)
+    seven_zip (>= 0.0.0)
+  compat_resource (12.19.1)
+  git (8.0.0)
+    build-essential (>= 0.0.0)
+    homebrew (>= 0.0.0)
+  homebrew (4.3.0)
+  mingw (2.0.1)
+    seven_zip (>= 0.0.0)
+  ohai (5.2.1)
+  redis (0.0.4)
+  seven_zip (2.0.2)
+    windows (>= 1.2.2)
+  sudo (4.0.0)
+  windows (3.4.4)
+    ohai (>= 4.0.0)
+  xbuild (0.1.0)
+    build-essential (>= 0.0.0)
+    git (>= 0.0.0)
+    yum (>= 0.0.0)
+  yum (5.1.0)
+  yum-epel (2.1.2)
+    compat_resource (>= 12.16.3)
