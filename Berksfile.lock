@@ -1,6 +1,9 @@
 DEPENDENCIES
   build-essential
   git
+  mackerel-agent
+    git: https://github.com/mackerelio/cookbook-mackerel-agent.git
+    revision: 19994501514b5b831fe43addfd0222463ced117d
   redis
     git: git://github.com/kentaro/chef-redis.git
     revision: 54a20fe89da33812034e64ab69a371e7b2e918d4
@@ -10,6 +13,7 @@ DEPENDENCIES
   yum-epel
 
 GRAPH
+  apt (6.1.4)
   build-essential (8.0.4)
     mingw (>= 1.1)
     seven_zip (>= 0.0.0)
@@ -18,6 +22,9 @@ GRAPH
     build-essential (>= 0.0.0)
     homebrew (>= 0.0.0)
   homebrew (4.3.0)
+  mackerel-agent (2.0.0)
+    apt (>= 0.0.0)
+    yum (>= 0.0.0)
   mingw (2.0.1)
     seven_zip (>= 0.0.0)
   ohai (5.2.1)
