@@ -2,6 +2,7 @@ name "app"
 run_list %w(
   role[base]
   recipe[sudo]
+  recipe[mackerel]
   recipe[nginx]
   recipe[xbuild]
   recipe[perl]
