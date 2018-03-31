@@ -1,5 +1,7 @@
-Dir.glob("#{File.dirname(__FILE__)}/*.rb") do |file|
-  next if file =~ /default\.rb$/
-  file_name = file.scan(/([^\/]+)\.rb$/)[0].first
-  include_recipe "base::#{file_name}"
-end
+include_recipe "base::user"
+include_recipe "base::files"
+include_recipe "base::gcc"
+include_recipe "base::git"
+include_recipe "base::iptables"
+include_recipe "base::rpm-build"
+include_recipe "base::yum"
