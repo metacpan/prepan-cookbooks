@@ -1,7 +1,8 @@
 user node.base.user.name do
-  action   :create
-  password "$1$3uVcoLeR$lnfAW3PtHJBjk.Pknldad."
-  supports manage_home: true, non_unique: false
+  action      :create
+  password    "$1$3uVcoLeR$lnfAW3PtHJBjk.Pknldad."
+  manage_home true
+  non_unique  false
 end
 
 directory "/home/deployer/.ssh" do
