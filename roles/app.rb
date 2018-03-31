@@ -42,4 +42,10 @@ override_attributes(
       ]
     }
   },
+
+  "mackerel-agent" => {
+    "conf" => {
+      "roles" => ["prepan:app"],
+    },
+  },
 )
