@@ -6,3 +6,4 @@
 /cookbooks/
 /tmp/librarian/
 /.chef/
+/data_bag_key

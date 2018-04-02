@@ -2,6 +2,7 @@ name "app"
 run_list %w(
   role[base]
   recipe[sudo]
+  recipe[mackerel]
   recipe[nginx]
   recipe[xbuild]
   recipe[perl]
@@ -40,5 +41,17 @@ override_attributes(
         git://github.com/miyagawa/carton.git
       ]
     }
+  },
+
+  "xbuild" => {
+    "installs" => [
+      { "language" => "perl", "version" => "5.16.3", "prefix" => "/usr/local/perl-prepan"},
+    ],
+  },
+
+  "mackerel-agent" => {
+    "conf" => {
+      "roles" => ["prepan:app"],
+    },
   },
 )

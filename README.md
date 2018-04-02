@@ -89,6 +89,8 @@ $ bundle exec knife solo prepare local.prepan.org
 $ bundle exec knife solo cook local.prepan.org
 ```
 
+You need `data_bag_key` in the repository root to run `knife solo cook`.
+
 ## Provision Hosts on Production (EC2)
 
 Prepare remote host:
