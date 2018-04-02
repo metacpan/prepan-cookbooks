@@ -43,6 +43,12 @@ override_attributes(
     }
   },
 
+  "xbuild" => {
+    "installs" => [
+      { "language" => "perl", "version" => "5.16.3", "prefix" => "/usr/local/perl-prepan"},
+    ],
+  },
+
   "mackerel-agent" => {
     "conf" => {
       "roles" => ["prepan:app"],
