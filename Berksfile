@@ -10,5 +10,4 @@ cookbook "build-essential"
 cookbook "git"
 cookbook "sudo"
 cookbook "redis", git: "git://github.com/kentaro/chef-redis.git"
-cookbook "xbuild"
 cookbook 'mackerel-agent'
