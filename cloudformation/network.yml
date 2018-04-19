@@ -70,3 +70,13 @@ Resources:
           IpProtocol: "tcp"
           ToPort: 80
       VpcId: !Ref VPC
+
+Outputs:
+  PublicSubnet:
+    Value: !Ref PublicSubnet
+    Export:
+      Name: prepan:PublicSubnet
+  AppServerSecurityGroup:
+    Value: !Ref AppServerSecurityGroup
+    Export:
+      Name: prepan:AppServerSecurityGroup
