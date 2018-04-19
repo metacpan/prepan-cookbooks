@@ -53,3 +53,20 @@ Resources:
       RouteTableId: !Ref PublicRouteTable
       SubnetId: !Ref PublicSubnet
 
+  AppServerSecurityGroup:
+    Type: "AWS::EC2::SecurityGroup"
+    Properties:
+      GroupName: "prepan-app-sg"
+      GroupDescription: "prepan-app-sg SecurityGroup for app-server instance in public-subnet"
+      SecurityGroupIngress:
+        - CidrIp: 0.0.0.0/0
+          Description: "SSH"
+          FromPort: 22
+          IpProtocol: "tcp"
+          ToPort: 22
+        - CidrIp: 0.0.0.0/0
+          Description: "HTTP"
+          FromPort: 80
+          IpProtocol: "tcp"
+          ToPort: 80
+      VpcId: !Ref VPC
