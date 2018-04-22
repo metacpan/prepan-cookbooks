@@ -1,0 +1,16 @@
+{
+    "run_list": [
+        "role[app]",
+        "role[redis]"
+    ],
+
+    "app": {
+        "domain": "prepan.org"
+    },
+
+    "authorization":  {
+        "sudo": {
+            "users": ["ec2-user", "deployer"]
+        }
+    }
+}
