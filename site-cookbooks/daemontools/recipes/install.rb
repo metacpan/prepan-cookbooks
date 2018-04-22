@@ -1,6 +1,6 @@
 execute "install daemontools" do
   command <<-COMMAND
-rpm -ivh http://mirrors.qmailtoaster.com/daemontools-toaster-0.76-1.3.6.src.rpm &&
+rpm -ivh http://mirror2.qmailtoaster.com/daemontools-toaster-0.76-1.3.6.src.rpm &&
 rpmbuild -ba /root/rpmbuild/SPECS/daemontools-toaster.spec &&
 rpm -ivh /root/rpmbuild/RPMS/x86_64/daemontools-toaster-0.76-1.3.6.x86_64.rpm
 COMMAND
