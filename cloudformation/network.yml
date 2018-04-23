@@ -53,6 +53,27 @@ Resources:
       RouteTableId: !Ref PublicRouteTable
       SubnetId: !Ref PublicSubnet
 
+  # Private Subnet (for DB server)
+  # Two subnets with different AZ are required to create db subnet group
+  PrivateSubnet1:
+    Type: "AWS::EC2::Subnet"
+    Properties:
+      CidrBlock: "10.0.2.0/24"
+      AvailabilityZone: us-west-1b
+      Tags:
+        - Key: "Name"
+          Value: "prepan-private1"
+      VpcId: !Ref VPC
+  PrivateSubnet2:
+    Type: "AWS::EC2::Subnet"
+    Properties:
+      CidrBlock: "10.0.3.0/24"
+      AvailabilityZone: us-west-1c
+      Tags:
+        - Key: "Name"
+          Value: "prepan-private2"
+      VpcId: !Ref VPC
+
   AppServerSecurityGroup:
     Type: "AWS::EC2::SecurityGroup"
     Properties:
@@ -76,6 +97,14 @@ Outputs:
     Value: !Ref PublicSubnet
     Export:
       Name: prepan:PublicSubnet
+  PrivateSubnet1:
+    Value: !Ref PrivateSubnet1
+    Export:
+      Name: prepan:PrivateSubnet1
+  PrivateSubnet2:
+    Value: !Ref PrivateSubnet2
+    Export:
+      Name: prepan:PrivateSubnet2
   AppServerSecurityGroup:
     Value: !Ref AppServerSecurityGroup
     Export:
