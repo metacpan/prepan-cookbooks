@@ -1,0 +1,10 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  DBSubnetGroup:
+    Type: "AWS::RDS::DBSubnetGroup"
+    Properties:
+      DBSubnetGroupName: "prepan-db-subnet-group"
+      DBSubnetGroupDescription: "prepan-db-subnet-group"
+      SubnetIds:
+        - !ImportValue "prepan:PrivateSubnet1"
+        - !ImportValue "prepan:PrivateSubnet2"
