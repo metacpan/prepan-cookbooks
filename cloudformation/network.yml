@@ -74,6 +74,19 @@ Resources:
           Value: "prepan-private2"
       VpcId: !Ref VPC
 
+  DBSecurityGroup:
+    Type: "AWS::EC2::SecurityGroup"
+    Properties:
+      GroupName: "prepan-db-sg"
+      GroupDescription: "prepan-db-sg SecurityGroup for db managed by RDS"
+      SecurityGroupIngress:
+        - Description: "MySQL"
+          SourceSecurityGroupId: !Ref AppServerSecurityGroup
+          IpProtocol: "tcp"
+          FromPort: 3306
+          ToPort: 3306
+      VpcId: !Ref VPC
+
   AppServerSecurityGroup:
     Type: "AWS::EC2::SecurityGroup"
     Properties:
